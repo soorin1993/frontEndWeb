@@ -32,8 +32,8 @@ body {
 	
 	#title-line1 {
 		
-		margin-top: -137px;
-		width: 488px;
+		margin-top: -139px;
+		width: 482px;
 		
 		background-color: black;		
 		display: block;
@@ -44,7 +44,7 @@ body {
 	
 	#title-line2 {
 		
-		margin-left: 53px;
+		margin-left: 67px;
 		margin-top: 107px;
 		
 		background-color: black;		
@@ -58,7 +58,7 @@ body {
 		
 		color:red;
 		background: none;
-		
+		line-height: 20px;		
 	}
 	
 	#menu {
