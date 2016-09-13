@@ -1,15 +1,29 @@
+document.addEventListener("touchstart", function(){}, true);
+
+var lab1_2 = document.getElementById("lab1_2");
+var lab3_5 = document.getElementById("lab3_5");
+var lab4 = document.getElementById("lab4");
+var lab6 = document.getElementById("lab6");
+
 var textColor;
 var bgColor;
-var currentColor = true;
+var os;
+var line1;
+var line2;
 
-textColor = prompt("What text color? Choose from major color names.");
-bgColor = prompt("What background color? Choose from major color names.");
+lab1_2.onclick = function() {
 
-var os = document.getElementsByClassName("red-o");
-var line1 = document.getElementById("title-line1");
-var line2 = document.getElementById("title-line2");
+	textColor = prompt("What text color? Choose from major color names.");
+	bgColor = prompt("What background color? Choose from major color names.");
+	temp = alert("Click on the 'O's to change the color.")
 
-
+	os = document.getElementsByClassName("red-o");
+	line1 = document.getElementById("title-line1");
+	line2 = document.getElementById("title-line2");
+	
+	initColor();
+	
+}
 
 function initColor() {
 	
@@ -39,4 +53,49 @@ function changeColor() {
 			
 }
 
-initColor();
+lab3_5.onclick = function() {
+	
+	var image = document.getElementsByClassName("placeImg");
+	var h2s = document.getElementsByTagName("h2");
+	var picture = prompt("Are you a cat person or a dog person?");
+		
+	for (i = 0; i < image.length; i++) {
+		if (picture == "cat") {
+			h2s[i].style.color = "black";
+			image[i].src = "img/cat.jpg";
+		}
+		else if (picture == "Cat") {
+			
+			h2s[i].style.color = "black";
+			image[i].src = "img/cat.jpg";
+			
+		}
+		
+		else {
+
+			h2s[i].style.color = "black";
+			image[i].src = "img/dog.jpg"
+		}
+	}
+	
+}
+
+lab4.onclick = function() {
+	
+	var question = prompt("Should we build a wall?");
+	var answer = "No";
+	var counter = 0;
+	
+	while ((question != answer) && (counter < 4)) {
+		
+		question = prompt("Wrong. Should we build a wall?");
+		counter++;
+		
+	}
+	
+	var h3 = document.getElementById("wall");
+	h3.style.display = "block";
+
+	
+}
+
